@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cencel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Dessert Box ID</header>
+        <ul>
+
+            <li><a href="#" onclick="showSection('beranda')"><i class="fas fa-
+qrcode"></i>Beranda</a></li>
+            <li><a href="#" onclick="showSection('produk')"><i class="fas fa-
+cart-arrow-down"></i>All Produk</a></li>
+
+            <li><a href="#" onclick="showSection('kategori')"><i class="fas fa-
+stream"></i>Kategori</a></li>
+
+            <li><a href="#" onclick="showSection('event')"><i class="fas fa-
+calendar-week"></i>Events</a></li>
+
+            <li><a href="#" onclick="showSection('about')"><i class="fas fa-
+question-circle"></i>About</a></li>
+
+            <li><a href="#" onclick="showSection('services')"><i class="fas fa-
+sliders-h"></i>Service</a></li>
+
+            <li><a href="#" onclick="showSection('contact')"><i class="fas fa-
+envelope"></i>Contact</a></li>
+
+        </ul>
+    </div>
+    <main>
+        <section id="beranda" class="content active">
+            <h1>Beranda</h1>
+            <br>
+            <div class="card">
+                <img src="images/poto5.jpg" alt="fotosuasana">
+                <h2>Dessert Box ID</h2>
+                <p class="slogan">
+                    Manisnya, Tak Terkalahkan Sama Kamu.
+                </p>
+                <p>
+                    Nikmati dessert box lezat dengan perpaduan rasa manis,
+                    creamy, dan tekstur yang lembut di setiap suapan.
+                </p>
+                <p>
+                    Kami menyediakan berbagai pilihan rasa yang cocok untuk
+                    menemani waktu santai maupun sebagai hadiah untuk orang tersayang.
+                </p>
+                <p>
+                    Dibuat dengan bahan berkualitas dan dikemas dengan rapi
+                    untuk menjaga rasa dan kualitasnya.
+                </p>
+                
+                <h3>Selamat Datang di Toko Dessert Favorit!</h3>
+
+                <button onclick="sambutan()">Klik untuk Selamat Datang</button>
+                <p id="pesan">Silahkan Klik tombol</p>
+                <button onclick="ubahPesan()">Coba yuk klikkk</button>
+
+            </div>
+        </section>
+        <section id="produk" class="content">
+            <h1 style="text-align: center;">All Produk</h1>
+            <br>
+
+            <div class="grid">
+                <div class="card">xs
+                    <img src="images/foto1.jpg" alt="Tiramisu Dessert Box">
+                    <h3>Tiramisu Dessert Box</h3>
+                    <p>Rp15.000</p>
+                    <p>Dessert box Tiramisu yang manis dan lembut.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto2.jpg" alt="Red Velvet Dessert Box">
+                    <h3>Red Velvet Dessert Box</h3>
+                    <p>Rp17.000</p>
+                    <p>Dessert box Red Velvet yang creamy dan lezat.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto3.jpg" alt="Matcha Dessert Box">
+                    <h3>Matcha Dessert Box</h3>
+                    <p>Rp18.000</p>
+                    <p>Matcha lembut dengan cream yang manis.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto11.jpg" alt="Cheese Dessert Box">
+                    <h3>Cheese Dessert Box</h3>
+                    <p>Rp20.000</p>
+                    <p>Cheese creamy dengan rasa yang nikmat.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto5.jpg" alt="Oreo Dessert Box">
+                    <h3>Oreo Dessert Box</h3>
+                    <p>Rp16.000</p>
+                    <p>Perpaduan Oreo dan cream yang lembut.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto6.jpg" alt="Tirmasisu V2 Dessert Box">
+                    <h3>Tiramisu V2 Dessert Box</h3>
+                    <p>Rp18.000</p>
+                    <p>Dessert box tiramisu v2 yang sangat manis dan creamy.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto7.jpg" alt="Mini Dessert Box">
+                    <h3>Mini Dessert Box</h3>
+                    <p>Rp17.000</p>
+                    <p>Desert Box mini buat kamu yang mau nyicip.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto8.jpg" alt="mangga Dessert Box">
+                    <h3>Manggo Dessert Box</h3>
+                    <p>Rp20.000</p>
+                    <p>Rasa Manggo yang manis dan creamy.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto9.jpg" alt="Red Velvet Dessert Box">
+                    <h3>Red Velvet Dessert Box</h3>
+                    <p>Rp15.000</p>
+                    <p>Rasa Red Velvet yang lembut dan ringan.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto10.jpg" alt="Choco Cheese Dessert Box">
+                    <h3>Choco Cheese Dessert Box</h3>
+                    <p>Rp19.000</p>
+                    <p>Perpaduan cokelat dan keju yang lezat.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="kategori" class="content">
+            <h1 style="text-align: center;">Kategori Produk</h1>
+            <br>
+
+            <h2>Fancy</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="images/foto1.jpg" alt="Chocolate Dessert Box">
+                    <h3>Tiramisu Dessert Box</h3>
+                    <p>Rp15.000</p>
+                    <p>Dessert box cokelat yang manis dan lembut.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto2.jpg" alt="Cheese Chocolate Dessert">
+                    <h3>Red Velvet Dessert</h3>
+                    <p>Rp17.000</p>
+                    <p>Perpaduan cokelat dan keju yang lezat.</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/foto10.jpg" alt="Chocolate Oreo Dessert">
+                    <h3>Choco Dessert</h3>
+                    <p>Rp19.000</p>
+                    <p>Cokelat lembut dengan tambahan Choco Chip.</p>
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <h2>Hemat</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="images/foto9.jpg" alt="Matcha Dessert Box">
+                    <h3>Mini Dessert Box</h3>
+                    <p>Rp17.000</p>
+                    <p>Dessert box mini yang creamy dan lezat.</p>
+                </div>
+                <div class="card">
+                    <img src="images/foto5.jpg" alt="Matcha Oreo Dessert">
+                    <h3>Oreo Dessert</h3>
+                    <p>Rp18.000</p>
+                    <p>Perpaduan matcha dan Oreo yang nikmat.</p>
+                </div>
+                <div class="card">
+                    <img src="images/foto6.jpg" alt="Oreo Cheese Dessert">
+                    <h3>Tiramisu V2 Dessert</h3>
+                    <p>Rp16.000</p>
+                    <p>Tiramisu V2 creamy dengan rasa keju yang gurih.</p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <h2>Favorite</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="images/foto3.jpg" alt="Strawberry Dessert">
+                    <h3>Matcha Dessert Box</h3>
+                    <p>Rp18.000</p>
+                    <p>Dessert box dengan rasa matcha yang manis.</p>
+                </div>
+                <div class="card">
+                    <img src="images/foto11.jpg" alt="Red Velvet Dessert">
+                    <h3>Cheese Dessert Box</h3>
+                    <p>Rp20.000</p>
+                    <p>Cheese lembut dengan cream yang manis.</p>
+                </div>
+                <div class="card">
+                    <img src="images/foto8.jpg" alt="Biscoff Dessert">
+                    <h3>Manggo Dessert Box</h3>
+                    <p>Rp20.000</p>
+                    <p>Dessert box dengan rasa Manggo yang creamy.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="event" class="content">
+            <h1>Event & Promo</h1>
+            <p>Nikmati berbagai promo dan event menarik dari Sweet Box!</p>
+
+            <div class="grid">
+                <div class="card">
+                    <img src="images/promo1.jpg" alt="Promo Diskon 20%">
+                    <h3>Promo Diskon 20%</h3>
+                    <p>
+                        Dapatkan diskon 20% untuk berbagai pilihan dessert box
+                        favoritmu. Jangan sampai ketinggalan!
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/promo2.jpg" alt="Buy 2 Get 1 Free">
+                    <h3>Buy 2 Get 1 Free</h3>
+                    <p>
+                        Beli 2 dessert box dan dapatkan 1 dessert box gratis.
+                        Promo terbatas hanya di Sweet Box!
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/promo3.png" alt="Dessert Day">
+                    <h3>Dessert Day</h3>
+                    <p>
+                        Rayakan hari manis bersama Sweet Box dengan berbagai
+                        dessert box spesial dan diskon hingga 25%.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/promo4.jpg" alt="Weekend Sweet Festival">
+                    <h3>Weekend Sweet Festival</h3>
+                    <p>
+                        Nikmati weekend dengan berbagai dessert box favorit
+                        dan dapatkan diskon 15% selama event berlangsung.
+                    </p>
+                </div>
+            </div>
+            <center>
+            <button onclick="promo()">Lihat Promo</button>
+            </center>
+        </section>
+
+
+
+
+        <section id="about" class="content">
+            <h1 style="text-align: center;">Tentang Kami</h1>
+            <br>
+
+            <div style="text-align: center;">
+                <img src="images/foto4.png" alt="Dessert Box ID"
+                    style="width: 60%; max-width: 500px; border-radius: 10px;">
+            </div>
+            <br>
+            <button onclick="infoToko()">Lihat Informasi Toko</button>
+            <h2>Dessert Box ID</h2>
+            <p>
+                Dessert Box ID adalah usaha yang menyediakan berbagai macam dessert box
+                dengan rasa yang lezat dan harga yang terjangkau.
+            </p>
+            <p>
+                Dessert Box ID didirikan pada tahun 2024 dengan tujuan menyediakan
+                makanan penutup yang cocok dinikmati oleh berbagai kalangan.
+            </p>
+            <p>
+                Kami menyediakan berbagai pilihan rasa seperti cokelat, matcha,
+                red velvet, tiramisu, Oreo, dan strawberry.
+            </p>
+            <p>
+                Setiap dessert dibuat menggunakan bahan yang berkualitas agar memiliki
+                rasa yang enak dan tekstur yang lembut.
+            </p>
+            <p>
+                Kami juga selalu memperhatikan kebersihan dalam proses pembuatan
+                dan pengemasan setiap produk.
+            </p>
+            <p>
+                Dessert Box ID terus berusaha memberikan pelayanan yang ramah dan
+                cepat kepada setiap pelanggan.
+            </p>
+            <p>
+                Produk kami cocok untuk dinikmati sendiri, bersama keluarga,
+                maupun diberikan sebagai hadiah untuk orang terdekat.
+            </p>
+            <p>
+                Dengan berbagai pilihan rasa dan harga, kami berharap Dessert Box ID
+                dapat menjadi salah satu pilihan dessert favorit bagi pelanggan.
+            </p>
+            <br>
+            <h2>Tahun Berdiri</h2>
+            <p>2024</p>
+            <br>
+            <h2>Keunggulan Kami</h2>
+            <ul>
+                <li>Berbagai pilihan rasa</li>
+                <li>Menggunakan bahan berkualitas</li>
+                <li>Harga terjangkau</li>
+                <li>Dibuat dengan bersih dan rapi</li>
+                <li>Kemasan praktis dan menarik</li>
+            </ul>
+        </section>
+
+
+        <section id="services" class="content">
+            <h1 style="text-align: center;">Layanan Kami</h1>
+            <br>
+            <div class="grid" style="grid-template-columns: 1fr;">
+                <div class="card">
+                    <img src="images/poto1.jpg" alt="Take Away">
+                    <h3>Take Away</h3>
+                    <p>
+                        Pelanggan dapat membeli dessert box untuk dibawa pulang
+                        dengan kemasan yang praktis dan rapi.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="images/poto2.jpg" alt="Delivery">
+                    <h3>Delivery</h3>
+                    <p>
+                        Kami menyediakan layanan pengantaran dessert box
+                        agar pelanggan dapat menikmati produk dari rumah.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="images/poto3.jpg" alt="Pre Order">
+                    <h3>Pre Order</h3>
+                    <p>
+                        Pelanggan dapat melakukan pemesanan terlebih dahulu
+                        untuk kebutuhan acara atau jumlah pesanan tertentu.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="contact" class="content">
+            <h1 style="text-align: center;">Kontak Kami</h1>
+            <br>
+            <div class="card">
+                <img src="images/poto4.jpg" alt="Toko Dessert Box">
+
+                <h3>Alamat</h3>
+                <p>
+                    Jl. Contoh No. 25, Yogyakarta
+                </p>
+                <h3>WhatsApp</h3>
+                <p>
+                    0812-3456-7890
+                </p>
+                <h3>Instagram</h3>
+                <p>
+                    @dessertboxid
+                </p>
+                <h3>Jam Operasional</h3>
+                <p>
+                    Senin - Sabtu: 09.00 - 21.00 WIB
+                </p>
+                <p>
+                    Minggu: 10.00 - 20.00 WIB
+                </p>
+            </div>
+            <center>
+            <button onclick="kontak()">Hubungi Kami</button>
+            </center>
+        </section>
+
+
+    </main>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.content').forEach(sec =>
+                sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

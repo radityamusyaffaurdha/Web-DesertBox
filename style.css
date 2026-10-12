@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+/* =========================
+RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* =========================
+BODY
+========================= */
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background-image: url("https://i.pinimg.com/1200x/4f/78/e5/4f78e5375828ce17bc023cd79dba0a58.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+    /* =========================
+CHECKBOX
+========================= */
+    #check {
+        display: none;
+    }
+
+    /* =========================
+SIDEBAR
+========================= */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -190px;
+        width: 190px;
+        height: 100vh;
+        background: #042331;
+        transition: all 0.5s ease;
+        z-index: 1000;
+    }
+
+    /* =========================
+SIDEBAR HEADER
+========================= */
+    .sidebar header {
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+        background: #063146;
+        user-select: none;
+    }
+
+    /* =========================
+SIDEBAR MENU
+========================= */
+    .sidebar ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar li {
+        margin: 0;
+    }
+
+    .sidebar ul a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        color: white;
+        font-size: 15px;
+        padding-left: 28px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        transition: 0.3s;
+    }
+
+    /* ICON */
+    .sidebar ul a i {
+        width: 30px;
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    /* HOVER */
+    .sidebar ul a:hover {
+        padding-left: 35px;
+        background-color: #064663;
+    }
+
+    /* =========================
+TOMBOL MENU
+========================= */
+    label #btn,
+    label #cencel {
+        position: fixed;
+        background-color: #312004;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    /* TOMBOL HAMBURGER */
+    label #btn {
+        left: 25px;
+        top: 20px;
+        font-size: 25px;
+        color: white;
+        padding: 7px 10px;
+        z-index: 900;
+    }
+
+    /* TOMBOL X */
+    label #cencel {
+        left: -150px;
+        top: 17px;
+        font-size: 22px;
+        color: #0a5275;
+        padding: 5px 8px;
+        z-index: 1100;
+    }
+
+    /* =========================
+SIDEBAR DIBUKA
+========================= */
+    #check:checked ~ .sidebar {
+        left: 0;
+    }
+
+    /* Tombol hamburger hilang */
+    #check:checked ~ label #btn {
+        left: 250px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Tombol X muncul */
+    #check:checked ~ label #cencel {
+        left: 155px;
+    }
+
+    /* =========================
+MAIN CONTENT
+========================= */
+    main {
+        margin-left: 0;
+        padding: 20px;
+        min-height: 100vh;
+        transition: all 0.5s ease;
+    }
+
+    /* MAIN BERGESER SAAT SIDEBAR TERBUKA */
+    #check:checked ~ main {
+        margin-left: 190px;
+    }
+
+    /* =========================
+SECTION
+========================= */
+    section {
+        min-height: calc(100vh - 40px);
+        background-position: center;
+        background-size: cover;
+        transition: all 0.5s;
+    }
+
+    /* =========================
+CONTENT
+========================= */
+    .content {
+        min-height: calc(100vh - 40px);
+        padding: 40px;
+        margin: 0;
+        background: rgba(141, 161, 185, 0.8);
+        border-radius: 10px;
+        display: none;
+    }
+
+    /* CONTENT AKTIF */
+    .content.active {
+        display: block;
+    }
+
+    /* =========================
+JUDUL
+========================= */
+    .content h1 {
+        color: #042331;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* =========================
+CARD
+========================= */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s,
+        filter 0.3s;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .card:hover {
+        transform: scale(1.05) rotate(1deg);
+        filter: brightness(1.1);
+    }
+
+    /* =========================
+FORM
+========================= */
+    form input,
+    form textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+    }
+
+    form textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    form button {
+        padding: 10px 20px;
+        background-color: #042331;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background-color: #064663;
+    }
+
+    /* =========================
+RESPONSIVE
+========================= */
+    @media (max-width: 900px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* =========================
+HP / LAYAR KECIL
+========================= */
+    @media (max-width: 600px) {
+        .sidebar {
+            width: 160px;
+            left: -160px;
+        }
+
+        .sidebar header {
+            height: 55px;
+            font-size: 16px;
+        }
+
+        .sidebar ul a {
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            padding-left: 20px;
+        }
+
+        .sidebar ul a i {
+            width: 25px;
+            font-size: 14px;
+        }
+
+        .sidebar ul a:hover {
+            padding-left: 28px;
+        }
+
+        /* Hamburger/garis 3 */
+        label #btn {
+            left: 20px;
+            top: 15px;
+            font-size: 24px;
+        }
+
+        /* Tombol X */
+        label #cencel {
+            left: -130px;
+            top: 15px;
+            font-size: 20px;
+        }
+
+        /* Sidebar dibuka */
+        #check:checked ~ .sidebar {
+            left: 0;
+        }
+
+        #check:checked ~ main {
+            margin-left: 0;
+        }
+
+        #check:checked ~ label #cencel {
+            left: 130px;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .grid {
+            grid-template-columns: 1fr;
+        }
+
+        .content h1 {
+            font-size: 25px;
+        }
+    }
